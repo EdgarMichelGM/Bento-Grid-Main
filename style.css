@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
+@font-face {
+    font-family: 'DM Sans';
+    src: url(./assets/fonts/static/DMSans-Medium.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    font-family: "DM Sans", sans-serif; 
+    font-weight: 400;
+    font-size: 18px;
+    color: hsl(0, 0%, 7%);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f9f9f9;
+}
+
+.grid-container>* {
+    box-shadow: 10px 6px 37px -13px rgba(36, 36, 36, 0.74);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.grid-container {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    max-width: 350px;
+
+    /* Áreas nombradas */
+    grid-template-areas:
+        "card-2"
+        "card-5"
+        "card-6"
+        "card-3"
+        "card-3"
+        "card-8"
+        "card-8"
+        "card-7"
+        "card-1"
+        "card-4"
+        "card-4"; 
+
+    /* Altura de cada fila */
+    grid-auto-rows: 210px;
+}
+
+.card-1 {
+    grid-area: card-1;
+    background-color: hsl(31, 66%, 93%);
+}
+.card-2 {
+    grid-area: card-2;
+    font-size: 24px;
+    background-color: hsl(256, 67%, 59%);
+    color: #f9f9f9;
+}
+.card-3 {
+    grid-area: card-3;
+    background-color: hsl(254, 88%, 90%);
+}
+.card-4 {
+    grid-area: card-4;
+    background-color: hsl(39, 100%, 71%);
+}
+.card-5 {
+    grid-area: card-5;
+}
+.card-6 {
+    grid-area: card-6;
+    background-color:  hsl(39, 100%, 71%);
+}
+.card-7 {
+    grid-area: card-7;
+}
+.card-8 {
+    grid-area: card-8;
+}
+
+.card-2 .small-text {
+    font-size: 0.8rem; /* o 14px por ejemplo */
+    display: block;    /* para que esté en su propia línea si lo necesitas */
+    margin-top: 5px;   /* espacio extra opcional */
+}
+
+.card.card-6 {
+    display: flex;
+    flex-direction: column;   /* organiza en columna */
+    justify-content: space-between; /* empuja la imagen hacia abajo */
+    padding: 1rem;  /* o lo que ya tenías */
+    height: 100%;   /* asegúrate que tenga altura para que el push funcione */
+    overflow: hidden;
+    position: relative;
+}
+
+.card.card-8{
+    background-color: hsl(256, 67%, 59%);
+    align-items: center;
+    color: #f9f9f9;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 21px;
+}
+
+.card.card-7 { 
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 1rem;
+}
+
+.card.card-1 {
+    flex-direction: column;
+    text-align: left;
+    padding: 2rem;
+    font-size: larger;
+}
+
+.card.card-4 { 
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 2rem;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.card.card-5 { 
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 1rem;
+}
+
+.img-card-6 {
+        align-self: flex-start;   /* alinea imagen hacia la izquierda */
+        padding-left: 0.3rem;     /* separa un poco desde el borde izquierdo */
+        margin-top: auto; 
+}
+
+.img-card-6 img {
+    width: 222px;
+    height: auto;
+    display: block;
+}
+
+.img-card-3 {
+    padding: 0.5rem;
+    align-self: center;
+    margin-top: auto;
+}
+
+.img-card-4 {
+    margin: 2rem;
+    margin-left: 0em;
+    display: flex;
+}
+
+.percentage { 
+    margin-bottom: 0px;
+}
+
+.subtitle { 
+    line-height: 0;
+}
